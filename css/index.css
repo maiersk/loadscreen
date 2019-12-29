@@ -1,0 +1,108 @@
+.bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    min-width: 1000px;
+    z-index: -10;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+
+    background-color:rgb(64, 64, 64);
+    background-image:url('https://dss1.baidu.com/9vo3dSag_xI4khGko9WTAnF6hhy/super/crop=138,0,1283,802/sign=9471e4b53501213fdb7c149c69d605e9/a8773912b31bb051e17863443a7adab44aede07a.jpg');
+}
+
+.container {
+    padding: 0;
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.50);
+
+}
+
+
+
+header {
+    
+    display: flex;
+    /* 子元素水平方向对齐 */
+    justify-content: center;
+    /* 侧轴子元素垂直对齐 */
+    align-items: center;  
+
+    background-color: rgba(0, 0, 0, 0.90);
+
+}
+
+header .webtitle {
+    margin-left: 10px;
+    margin-top: 0px;
+    color: white;
+    text-align: center;
+}
+
+
+
+.flex-row {
+    display: flex;
+    padding: 15px;
+
+    min-height: 500px;
+
+    box-sizing: border-box;
+}
+
+.left {
+    
+}
+
+.left .personal {
+    width: 100%;
+
+    background-color: rgba(0, 0, 0, 0.90);
+}
+
+.left .music {
+    margin-top: 15px;
+
+    background-color: rgba(0, 0, 0, 0.90);
+}
+
+.left .card-title {
+    text-align: center;
+    color: white;
+}
+
+
+
+.right {
+    margin-left: 15px;
+    width: 100%;
+
+}
+
+.right .gameimg-list {
+    display: flex;
+}
+
+.right .gameimg-list .gameimg {
+    width: 100%;
+    height: 350px;
+
+    margin-bottom: 15px;
+}
+
+.right .list-group {
+    width: 100%;
+}
+
+.right .list-group-item.active{
+    border: 2px solid #007bff;
+}
+
+.right .list-group-item {
+    background-color: rgba(0, 0, 0, 0.90);
+}

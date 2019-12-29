@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js" integrity="sha384-L2pyEeut/H3mtgCBaUNw7KWzp5n9+4pDQiExs933/5QfaTh8YStYFFkOzSoXjlTb" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./config.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/music.js"></script>
+
+    <title>NxMod可塑性服务器加载页</title>
+</head>
+    <body>
+        <div class="bg">
+
+        <div class="container">
+            <header>
+                <img class="logo" src="https://live.staticflickr.com/65535/49287650282_432e9536f4_o.png">
+                <h1 class="webtitle">NxMod可塑性服务器</h1>
+            </header>
+            
+            <section class="flex-row">
+                <div class="mb-3 left">
+
+                    <div class="card personal" style="width: 18rem;">
+                        <img class="card-img-top" alt="steam个人头像">
+                        <div class="card-body">
+                            <h5 class="card-title">欢迎回来</h5>
+                            <h5 id="steamName" class="card-title">name</h4>
+                        </div>
+                    </div>
+
+                    <div class="card music" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">正在播放的是</h5>
+                            <h5 id="steamName" class="card-title">待更新</h4>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="mb-9 right">    
+                    <div id="carouselExampleSlidesOnly" class="carousel slide gameimg-list" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="http://group.photo.store.qq.com/qun/V13Z0lBA2AODjE/V3tILbAEZOl1VyKSUs5/800" class="gameimg" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="http://group.photo.store.qq.com/qun/V13Z0lBA2AODjE/V3tILbAEVz*UVuKOLws/800" class="gameimg" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="http://group.photo.store.qq.com/qun/V13Z0lBA4OSgNG/V3tILbAETljsFxXgrYq/800" class="gameimg" alt="...">
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul class="list-group">
+                        <li class="list-group-item active">服务器规则</li>
+                    </ul>      
+                </div>
+            </section>
+        </div>
+        <!-- <script src="http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=985438D9C169CDF9C8303DB02B15C629&steamids=76561198098162297"></script> -->
+    </body>
+</html>
