@@ -37,9 +37,12 @@ $(function() {
         success : (data) => {
             steamobj = data.response.players[0]
             // console.log(steamobj);
-
-            name.html(steamobj.personaname);
-            avatar.attr("src", steamobj.avatarfull);
+            if (steamobj) {
+                name.html(steamobj.personaname);
+                avatar.attr("src", steamobj.avatarfull);
+            } else {
+                console.error("none url params")
+            }
             // console.log(steamobj.personaname)
         },
         error: function() {
@@ -51,7 +54,7 @@ $(function() {
 
     // 刷新页面更换图片
     const bgimg = $(".bg");
-    bgimg.css("background-image", "url(" + imgarr[Math.floor(Math.random() * imgarr.length)] + ")")
+    bgimg.css("background-image", "url(" + imgarr[Math.floor(Math.random() * imgarr.length)] + ")");
     // console.log(imgarr[Math.round(Math.random() * imgarr.length)]);
 
 
@@ -62,10 +65,21 @@ $(function() {
     if (rulearr) {
         for (var _ in rulearr) {
             for (var k in rulearr[_]) {
-                ruleListGp.append("<li class='list-group-item list-group-item-" + k + "'>" + rulearr[_][k] +  "</li>")
+                ruleListGp.append("<li class='list-group-item list-group-item-" + k + "'>" + rulearr[_][k] +  "</li>");
                 // console.log(rulearr[_][k])
             }
 
+        }
+    }
+
+    // 遍历配置文件游戏截图数据
+    const indicat = $(".carousel-indicators");
+    const inner = $(".carousel-inner");
+
+    if (gameimgs) {
+        for (var i =0; i < gameimgs.length; i++) {
+            indicat.append("<li " + (i == 0 ? "class='active'" : "") + " data-target='#carouselExampleIndicators' data-slide-to='1'></li>");
+            inner.append("<div class='carousel-item " + (i == 0 ? "active" : "") + "'><img src=" + gameimgs[i] + " class='gameimg'></div>")
         }
     }
 })
