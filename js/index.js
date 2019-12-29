@@ -34,7 +34,7 @@ $(function() {
         url : url,
         type : "GET",
         dataType:"jsonp",
-        success : (data) => {
+        success : function(data) {
             steamobj = data.response.players[0]
             // console.log(steamobj);
             if (steamobj) {
