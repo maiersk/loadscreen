@@ -1,71 +1,91 @@
 <!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">    
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js" integrity="sha384-L2pyEeut/H3mtgCBaUNw7KWzp5n9+4pDQiExs933/5QfaTh8YStYFFkOzSoXjlTb" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+        <link rel="stylesheet" href="./css/index.css">
+        <script src="./config.js"></script>
+        <script src="./js/index.js"></script>
+        <script src="./js/music.js"></script>
 
-    <link rel="stylesheet" href="./css/index.css">
-    <script src="./config.js"></script>
-    <script src="./js/index.js"></script>
-    <script src="./js/music.js"></script>
+        <title>NxMod可塑性服务器加载页</title>
+    </head>
 
-    <title>NxMod可塑性服务器加载页</title>
-</head>
     <body>
         <div class="bg"></div>
 
-        <div class="container">
-            <header>
-                <img class="logo" src="https://live.staticflickr.com/65535/49287650282_432e9536f4_o.png">
-                <h1 class="webtitle">NxMod可塑性服务器</h1>
-            </header>
-            
-            <section class="flex-row">
-                <div class="mb-3 left">
-
-                    <div class="card personal" style="width: 18rem;">
-                        <img class="card-img-top" alt="steam个人头像">
-                        <div class="card-body">
-                            <h5 class="card-title">欢迎回来</h5>
-                            <h5 id="steamName" class="card-title">name</h5>
-                        </div>
-                    </div>
-
-                    <div class="card music" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">正在播放的是</h5>
-                            <h5 id="steamName" class="card-title">待更新</h5>
-                        </div>
-                    </div>
-
+        <div class="title">
+            <div class="container">
+                <div class="row">
+                    <img class="logo col-md-offset-3 col-md-6 col-xs-offset-2 col-xs-6" src="https://live.staticflickr.com/65535/49287650282_432e9536f4_o.png">
+                    <h1 class="webtitle text-left col-md-offset-1 col-md-6 col-xs-offset-1 col-xs-6">NxMod可塑性服务器</h1>
                 </div>
+            </div>
+        </div>
 
-                <div class="mb-9 right">    
-                    <div class="carousel slide gameimg-list" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <!-- <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li> -->
-                        </ol>
-                        <div class="carousel-inner">
-                            <!-- <div class="carousel-item active">
-                                <img src="http://group.photo.store.qq.com/qun/V13Z0lBA2AODjE/V3tILbAEZOl1VyKSUs5/800" class="gameimg" alt="...">
-                            </div> -->
+        
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <div class="thumbnail personal">
+                            <img alt="steam个人头像">
+                            <div class="caption">
+                                <h5 class="title">欢迎回来</h5>
+                                <h5 class="steamName">name</h5>
+                            </div>
+                        </div>
+
+                        <div class="thumbnail server">
+                            <div class="caption">
+                                <h5 class="title">服务器信息</h5>
+                                <h5 class="map">map</h5>
+                            </div>
                         </div>
                     </div>
 
-                    <ul class="list-group">
-                        <li class="list-group-item active">服务器规则</li>
-                    </ul>      
+                    <div class="col-lg-6">    
+                        <div class="carousel slide gameimg" id="carousel-example-generic" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <!-- <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li> -->
+                            </ol>
+                            <div class="carousel-inner">
+                                <!-- <div class="item active">
+                                    <img src="http://group.photo.store.qq.com/qun/V13Z0lBA2AODjE/V3tILbAEZOl1VyKSUs5/800" class="gameimg" alt="...">
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <ul class="list-group">
+                            <li class="list-group-item active">服务器规则</li>
+                        </ul>  
+                    </div>
+                
+                    <div class="col-lg-12">
+                        <div class="media music">
+                            <div class="media-left">
+                                <i class="glyphicon glyphicon-music"></i>
+                            </div>
+                            <div class="media-body">
+                                <h5 class="media-heading">歌名</h5>
+                                <audio autoplay controls onended="plynext()">
+                                    <!-- <source src="https://m7.music.126.net/20200102193126/e631914f22b7b0fd674e0110aee7dd35/ymusic/055c/0658/565a/2650280ae112ff8196e4a034efd21a5e.mp3"> -->
+                                </audio>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </section>
+            </div>
         </div>
 
     </body>

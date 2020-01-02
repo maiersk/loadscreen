@@ -15,19 +15,22 @@ function getParam() {
 $(function() {
     
     // 获取页面请求参数
-    let params = {};
-    params = getParam();
+    var params = getParam();
     // console.log(params);
 
 
 
+    // 显示当前地图
+    const map = $(".server .map");
+    map.html(params.map);
+
     // 使用steamapi获取玩家信息
     var tojsonp = "https://json2jsonp.com/?url=";
-    var steamapi = "https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v2/?key=" + APPKEY + "&steamids=" + params.steamids;
+    var steamapi = "https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v2/?key=" + APPKEY + "&steamids=" + params.steamid;
     var url = tojsonp + encodeURIComponent(steamapi) //+ "&callback=CALL_BACK";
     // console.log(url)
 
-    const name = $(".personal #steamName");
+    const name = $(".personal .steamName");
     const avatar = $(".personal img");
 
     $.ajax({
@@ -36,7 +39,7 @@ $(function() {
         dataType:"jsonp",
         success : function(data) {
             steamobj = data.response.players[0]
-            // console.log(steamobj);
+            console.log(steamobj);
             if (steamobj) {
                 name.html(steamobj.personaname);
                 avatar.attr("src", steamobj.avatarfull);
@@ -77,9 +80,9 @@ $(function() {
     const inner = $(".carousel-inner");
 
     if (gameimgs) {
-        for (var i =0; i < gameimgs.length; i++) {
-            indicat.append("<li " + (i == 0 ? "class='active'" : "") + " data-target='#carouselExampleIndicators' data-slide-to='1'></li>");
-            inner.append("<div class='carousel-item " + (i == 0 ? "active" : "") + "'><img src=" + gameimgs[i] + " class='gameimg'></div>")
+        for (var i = 0; i < gameimgs.length; i++) {
+            indicat.append("<li " + (i == 0 ? "class='active'" : "") + " data-target='#carousel-example-generic' data-slide-to=" + i + "></li>");
+            inner.append("<div class='item " + (i == 0 ? "active" : "") + "'><img src=" + gameimgs[i] + " class='gameimg'></div>")
         }
     }
 })
