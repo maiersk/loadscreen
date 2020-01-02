@@ -91,6 +91,7 @@
 
 /* .content .music */
 .content > .container .music {
+    width: 100%;
     margin-bottom: 20px;
     margin-right: 20px;
     padding: 8px;
