@@ -30,7 +30,8 @@ function plynext() {
     var name = mp3list[random].name;
     var url = mp3list[random].url;
     audioname.html(name);
-    audio.attr("src", url);
+    // audio.attr("src", url);
+    audio[0].src = url;
     audio[0].play();
 }
 
@@ -61,7 +62,8 @@ $(function() {
         var url = mp3list[random].url;
 
         audioname.html(name);
-        audio.attr("src", url);
+        // audio.attr("src", url);
+        audio[0].src = url;
 
         audio[0].volume = musicvolume;
 
