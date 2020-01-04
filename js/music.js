@@ -92,7 +92,9 @@ $(function() {
             startVolume : musicvolume,
             success: function(media, originalNode, instance) {
                 media.load();
-                media.play();
+                media.addEventListener('canplay', function() {
+                    media.play();
+                }, false);
             }
         });
 
