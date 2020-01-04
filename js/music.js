@@ -27,7 +27,7 @@ function getmp3(type, id) {
 $(function() {
 
     var mp3list = [];
-    
+
     // mp3list[getmp3("detail", 1370978408).name] = getmp3("song", 1370978408).url;
 
     if (musiclist) {
@@ -52,14 +52,14 @@ $(function() {
         var url = mp3list[random].url;
 
         audioname.html(name);
-        // audio.attr("src", url);
-        audio[0].src = url;
+        
         audio.append("<source src=" + url + " type='audio/mp3'>");
 
         audio.mediaelementplayer({
             pluginPath: 'https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/',
             shimScriptAccess: 'always',
             startVolume : musicvolume,
+            src : url,
             success: function(media, originalNode, instance) {
                 media.load();
 
