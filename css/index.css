@@ -105,6 +105,12 @@
 }
 
 .content > .container .music > .media-body > .media-heading {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     color: white;
+}
+
+/* player button */
+.mejs__button > button{
+    /* background-color: white; */
+    
 }

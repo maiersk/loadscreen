@@ -55,6 +55,8 @@ $(function() {
     // console.log(mp3list);
     const audioname = $(".music > .media-body > .media-heading");
     const audio = $(".music > .media-body > audio");
+    
+    
 
     if (mp3list) {
         var random = Math.floor(Math.random() * mp3list.length);
@@ -68,8 +70,32 @@ $(function() {
         audio[0].volume = musicvolume;
 
         audio[0].onended = function () {
-            plynext();
+            var rerandom = Math.floor(Math.random() * mp3list.length);
+            name = mp3list[rerandom].name;
+            url = mp3list[rerandom].url;
+
+            audioname.html(name);
+            audio.attr("src", url).mediaelementplayer({
+                pluginPath: 'https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/',
+                shimScriptAccess: 'always',
+                startVolume : musicvolume,
+                success: function(media, originalNode, instance) {
+                    media.load();
+                    media.play();
+                }
+            });
         }
+
+        audio.mediaelementplayer({
+            pluginPath: 'https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/',
+            shimScriptAccess: 'always',
+            startVolume : musicvolume,
+            success: function(media, originalNode, instance) {
+                media.load();
+                media.play();
+            }
+        });
+
     }
 
 })
