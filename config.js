@@ -23,7 +23,8 @@ const imgarr = [
 const gameimgs = [
     "https://live.staticflickr.com/65535/49292928907_364cbfc438_o.jpg",
     "https://live.staticflickr.com/65535/49292730311_a1b7614ea0_o.jpg",
-    "https://live.staticflickr.com/65535/49292741661_42155ca895_o.jpg",
+    "https://live.staticflickr.com/65535/49327327601_2ff3b9b986_o.jpg",
+    "https://live.staticflickr.com/65535/49326857403_364c226fe3_o.jpg",
 ];
 
 // 使用网易云api，直接找id歌曲播放
