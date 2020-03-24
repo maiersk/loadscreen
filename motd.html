@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            margin-top: 15px;
+            background: url("https://live.staticflickr.com/65535/49689911401_6aa26ca834_o.png");
+        }
+
+        header {
+            background-color: rgb(255, 204, 204);
+        }
+
+        header > .row {
+            /* gmod旧浏览器不兼容 */
+            /* display: flex; */
+
+            /* align-items: center;
+            justify-content: center; */
+        }
+
+        header > .row > div > p {
+            width: 295px;
+            font-size: xx-large;
+            color: white;
+
+            padding-top: 15px;
+            text-align: center;
+        }
+
+        .about_us {
+            background-color: rgb(51, 122, 183);
+
+            /* gmod旧浏览器不兼容 */
+            /* display: flex; */
+
+            /* align-items: center;
+            justify-content: flex-end; */
+
+            height: 35px;
+        }
+
+        .about_us div {
+            padding: 0;
+            padding-right: 5px;
+        }
+
+        .about_us h5 {
+            width: 120px;
+            color: white;
+        }
+        
+        .about_us h5 > a {
+            color: rgb(255, 204, 204);
+        }
+
+        section {
+            background-color: rgb(255, 204, 153);
+            
+            box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, 0.5) inset;
+            /* box-sizing: border-box; */
+            padding: 20px 10px;
+        }
+
+        .list-group > .list-group-item-primary {
+            color: white;
+            background-color: rgba(51, 122, 183, 0.8);
+        }
+
+        footer {
+            box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.5) inset;
+
+            background-color: rgb(255, 204, 204);
+
+            margin-bottom: 15px;
+        }
+
+        footer > .row {
+            /* gmod旧浏览器不兼容 */
+            /* display: flex; */
+
+            /* align-items: center;
+            justify-content: center; */
+        }
+    </style>
+    
+    <title>Document</title>
+</head>
+<body class="container">
+    <header>
+        <div class="row">
+            <div class="col-md-offset-4 col-md-1 col-xs-offset-2 col-xs-6"> 
+                <img src="https://live.staticflickr.com/65535/49287650282_432e9536f4_o.png">
+            </div>
+            <div class="col-md-5">
+                <p>NxMod可塑性服务器</p>
+            </div>
+        </div>
+        <div class="about_us">
+            <div class="row">
+                <div class="col-md-offset-8 col-md-2">
+                    <h5>QQ群: 297842208</h5>
+                </div>
+                <div class="col-md-2">
+                    <h5>Steam群组: <a href="https://steamcommunity.com/groups/nxmod">查看</a></h5>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="row">
+            <img class="col-md-6" src="https://live.staticflickr.com/65535/48815313417_784e3ea3f1_b.jpg"></img>
+            <div class="col-md-6 noteslist">
+                <ul class="list-group">
+                    <li class="list-group-item active">注意事项</li>
+                    <li class="list-group-item list-group-item-warning">本服萌新部分工具受限，如需要解除请申请公民权。</li>
+                    <li class="list-group-item list-group-item-warning">本服更新结束，部分功能除bug，官方更新外暂不更新。</li>
+                    <li class="list-group-item list-group-item-warning">本服区域制玩法，pvp/pve请到相应区域。尽量不要在非pvp/pve区使用武器/npc</li>
+                    <li class="list-group-item list-group-item-danger">pvp区不需要穿墙到达，输入!pvp命令或复活点传送门。</li>
+                    <li class="list-group-item list-group-item-danger">pve区在复活点左手边传送门，玩npc的区域。</li>
+                    <li class="list-group-item list-group-item-danger">公民/建筑滥用权限，萌新可以截图管理员/腐竹处理。详细请看警告标准。</li>
+                    <li class="list-group-item list-group-item-primary">murder小游戏自行组织，可以供给玩家制作地图后再开局。</li>
+                    <li class="list-group-item list-group-item-primary">刚进服的萌新有必要阅读服务器规则。</li>
+                </ul>
+            </div>
+            <div class="col-md-12 rulelist">
+                <ul class="list-group">
+                    <li class="list-group-item active">服务器规则</li>
+                    <li class="list-group-item list-group-item-danger">出现以下违规行为的会被腐竹/管理/建筑/公民处理。服务器的管理是互相监督的，出现小问题尽量反馈给管理员处理，严重给腐竹处理。</li>
+                    <li class="list-group-item list-group-item-danger">捣乱类</li>
+                    <li class="list-group-item list-group-item-warning">1.使用武器、物品等或任何能(射击/碰撞)别人的(建筑/玩家人物)的。</li>
+                    <li class="list-group-item list-group-item-warning">1.1(射击：建筑/玩家)：</li>
+                    <li class="list-group-item list-group-item-warning">1.1.1如果连续射击达到十秒以上。</li>
+                    <li class="list-group-item list-group-item-warning">1.1.2如果断断续续连发的计次数三次。</li>
+                    <li class="list-group-item list-group-item-warning">1.1.3无规律和都能避开以上两条继续骚扰的算故意捣乱。可以截图警告记录+(可选截图正在射击的玩家)。</li>
+                    <li class="list-group-item list-group-item-danger">1.2(碰撞：建筑/玩家)：</li>
+                    <li class="list-group-item list-group-item-warning">1.2.1碰撞断断续续三次</li>
+                    <li class="list-group-item list-group-item-warning">1.2.2两秒内次数大于三次的（如果无法正确判断恶意/无意/违规意识低/必须使用此规则），
+                        误判玩家严格按照警告次数不足或警告有误处罚。</li>
+                    <li class="list-group-item list-group-item-danger">2.(武器噪音/播放器噪音)骚扰，有足够证据的，严重的可以截图上交到管理员处理。</li>
+                    <li class="list-group-item list-group-item-warning">2.1播放器噪音范围：
+                        范围全服或播放范围大于默认值+50，
+                        特意在玩家附近播放一堆音乐骚扰，或物理枪拖着播放器一直跟着玩家进行骚扰。</li>
+                    <li class="list-group-item list-group-item-warning">2.2武器噪音恶意骚扰的。</li>
+                    <li class="list-group-item list-group-item-danger">卡服类</li>
+                    <li class="list-group-item list-group-item-warning">1.任何可制造卡服较严重的物理碰撞警告一次（丢帧高ping10秒以上）</li>
+                    <li class="list-group-item list-group-item-warning">2.刷物品卡服未遂，至丢包5秒的踢出/以上ban一天</li>
+                    <li class="list-group-item list-group-item-warning">3.刷物品卡服至严重后果直接ban</li>
+                    <li class="list-group-item list-group-item-danger">玩家永久物品问题。</li>
+                    <li class="list-group-item list-group-item-warning">玩家可设置永久物品但因什么事而离开服务器想再回来继续建的，
+                        在建筑附近使用3d2d文字说明永久原因及是否会回来，
+                        如果不设置原因离服过久将被管理员清理。</li> 
+                    <li class="list-group-item list-group-item-danger">警告标准</li>
+                    <li class="list-group-item list-group-item-warning">轻微的骚扰或玩家被无规定的行为骚扰到，需要友善的态度提醒三次不听警告</li>
+                    <li class="list-group-item list-group-item-warning">恶意的需要提醒一次不听警告</li>
+                    <li class="list-group-item list-group-item-warning">提醒需要指明问题表明打扰到自己</li>
+                    <li class="list-group-item list-group-item-warning">警告内容最简写法：武器骚扰，噪音骚扰，超范围噪音骚扰，等</li>
+                    <li class="list-group-item list-group-item-warning">警告命令日后将更新为固定警告内容，使用warn 命令中不能存在人身攻击，辱骂等。
+                        不得略过管理规定说明的警告次数直接投票，或ban。发现将严重警告一次。</li>
+                    <li class="list-group-item list-group-item-warning">如果完全没有警告进行投票将取消一个星期的公民权</li>
+                    <li class="list-group-item list-group-item-warning">管理员发现公民出现滥用警告问题，可截图到腐竹反映</li>
+                </ul>
+            </div>
+            <div class="col-md-6 citizenlist">
+                <ul class="list-group">
+                    <li class="list-group-item active">公民权申请</li>
+                    <li class="list-group-item list-group-item-danger">公民权可以被动维护自身权益，公民权不是管理员，不涉及管理范围将视为滥权。</li>
+                    <li class="list-group-item list-group-item-danger">如是小学生需要素质和会玩的才行。不能放大型副本，重复放副本，爆炸物等。</li>
+                    <li class="list-group-item list-group-item-warning">需学会使用的工具：multi-parent，multi-unparent，焊接工具。</li>
+                    <li class="list-group-item list-group-item-warning">能做到请去Q群/steam社区联系腐竹回复满足以上提到的，即可完成申请。违规或不达要求取消权限。申请时需要演示工具使用过程截图给予审核。</li>
+                    <li class="list-group-item list-group-item-primary">解锁权限：复制器, 解放e2部分限制。ulx命令 warn/modle/goto等。</li>
+                    <li class="list-group-item list-group-item-danger">公民涉及的管理范围</li>
+                    <li class="list-group-item list-group-item-warning">被骚扰可警告处理。</li>
+                    <li class="list-group-item list-group-item-warning">卡服人员可警告处理。</li>
+                </ul>
+            </div>
+            <div class="col-md-6 buildlist">
+                <ul class="list-group">
+                    <li class="list-group-item active">建筑权申请</li>
+                    <li class="list-group-item list-group-item-danger">建筑权和公民权几乎一样</li>
+                    <li class="list-group-item list-group-item-danger">建筑权可以被动维护自身权益，公民权不是管理员，不涉及管理范围将视为滥权。</li>
+                    <li class="list-group-item list-group-item-danger">（一人只审核一次，提醒了什么原因不通过的，当天修改后的不接受重新审核）</li>
+                    <li class="list-group-item list-group-item-warning">能建造一间整体建筑，实用并美观，齐整。并给腐竹/管理员审核通过的。</li>
+                    <li class="list-group-item list-group-item-warning">需学会使用的工具：multi-parent，multi-unparent，焊接工具。</li>
+                    <li class="list-group-item list-group-item-warning">能做到请去Q群/steam社区联系腐竹回复满足以上提到的，即可完成申请。违规或不达要求取消权限。申请时需要演示工具使用过程截图给予审核。</li>
+                    <li class="list-group-item list-group-item-primary">解锁权限：复制器, 解放e2部分限制。ulx命令 warn/modle/goto等。</li>
+                    <li class="list-group-item list-group-item-danger">建筑涉及的管理范围</li>
+                    <li class="list-group-item list-group-item-warning">被骚扰可警告处理。</li>
+                    <li class="list-group-item list-group-item-warning">卡服人员可警告处理。</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="row">
+            <div class="col-md-offset-2 col-md-6">
+                <h5>如果遇到问题请到Q群或steam群组提出，管理员或腐竹会尽快回复并解决。</h5>
+            </div>
+            <div class="col-md-2">
+                <h5>2016-2020</h5>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
